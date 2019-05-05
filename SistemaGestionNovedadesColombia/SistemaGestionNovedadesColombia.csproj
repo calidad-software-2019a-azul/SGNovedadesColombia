@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9849D48D-9150-44F3-9456-F3A76F858052}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SistemaGestionNovedadesColombia</RootNamespace>
+    <AssemblyName>SistemaGestionNovedadesColombia</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SistemaGestionNovedadesColombia.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChreneLib">
+      <HintPath>E:\Downloads\Compressed\ChreneLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracion\Parametros\GrupoTallaColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\GrupoTallaColor.Designer.cs">
+      <DependentUpon>GrupoTallaColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Parametros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Parametros.Designer.cs">
+      <DependentUpon>Parametros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Usuario\BusquedaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Usuario\BusquedaUsuario.Designer.cs">
+      <DependentUpon>BusquedaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Usuario\MUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Usuario\MUsuario.Designer.cs">
+      <DependentUpon>MUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Usuario\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Usuario\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ayuda\AcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ayuda\AcercaDe.Designer.cs">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConexionSQL.cs" />
+    <Compile Include="Facturacion\BuscarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\BuscarArticulo.Designer.cs">
+      <DependentUpon>BuscarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\BuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\BuscarCliente.Designer.cs">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\BuscarVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\BuscarVendedor.Designer.cs">
+      <DependentUpon>BuscarVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\BusquedaFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\BusquedaFactura.Designer.cs">
+      <DependentUpon>BusquedaFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\EmitirFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\EmitirFactura.Designer.cs">
+      <DependentUpon>EmitirFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Imprimit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Imprimit.Designer.cs">
+      <DependentUpon>Imprimit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Articulo\BusquedaArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Articulo\BusquedaArticulo.Designer.cs">
+      <DependentUpon>BusquedaArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Articulo\ArticuloInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Articulo\ArticuloInventario.Designer.cs">
+      <DependentUpon>ArticuloInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Stock\ArticuloSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Stock\ArticuloSalida.Designer.cs">
+      <DependentUpon>ArticuloSalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Stock\ArticuloStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Stock\ArticuloStock.Designer.cs">
+      <DependentUpon>ArticuloStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Stock\Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Stock\Entrada.Designer.cs">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Stock\Salida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Stock\Salida.Designer.cs">
+      <DependentUpon>Salida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\BusquedaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\BusquedaCliente.Designer.cs">
+      <DependentUpon>BusquedaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoSistema.Designer.cs">
+      <DependentUpon>IngresoSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Vendedor\BusquedaVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\BusquedaVendedor.Designer.cs">
+      <DependentUpon>BusquedaVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\Vendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\Vendedor.Designer.cs">
+      <DependentUpon>Vendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedor\BusquedaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\BusquedaProveedor.Designer.cs">
+      <DependentUpon>BusquedaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor\Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\Proveedor.Designer.cs">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SGIVDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGIVDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Validacion.cs" />
+    <EmbeddedResource Include="Administracion\Parametros\GrupoTallaColor.resx">
+      <DependentUpon>GrupoTallaColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Parametros\Parametros.resx">
+      <DependentUpon>Parametros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Usuario\BusquedaUsuario.resx">
+      <DependentUpon>BusquedaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Usuario\MUsuario.resx">
+      <DependentUpon>MUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Usuario\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ayuda\AcercaDe.resx">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\BuscarArticulo.resx">
+      <DependentUpon>BuscarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\BuscarCliente.resx">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\BuscarVendedor.resx">
+      <DependentUpon>BuscarVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\BusquedaFactura.resx">
+      <DependentUpon>BusquedaFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\EmitirFactura.resx">
+      <DependentUpon>EmitirFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FacturaRep.rdlc" />
+    <EmbeddedResource Include="Facturacion\Imprimit.resx">
+      <DependentUpon>Imprimit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Articulo\ArticuloInventario.resx">
+      <DependentUpon>ArticuloInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Articulo\BusquedaArticulo.resx">
+      <DependentUpon>BusquedaArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Stock\ArticuloSalida.resx">
+      <DependentUpon>ArticuloSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Stock\ArticuloStock.resx">
+      <DependentUpon>ArticuloStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Stock\Entrada.resx">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Stock\Salida.resx">
+      <DependentUpon>Salida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\BusquedaCliente.resx">
+      <DependentUpon>BusquedaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoSistema.resx">
+      <DependentUpon>IngresoSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\BusquedaVendedor.resx">
+      <DependentUpon>BusquedaVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\Vendedor.resx">
+      <DependentUpon>Vendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Proveedor\BusquedaProveedor.resx">
+      <DependentUpon>BusquedaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor\Proveedor.resx">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SGIVDataSet1.xsc">
+      <DependentUpon>SGIVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SGIVDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SGIVDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGIVDataSet1.xss">
+      <DependentUpon>SGIVDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
