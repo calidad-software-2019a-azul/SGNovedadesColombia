@@ -40,7 +40,7 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtContrasenia = new ChreneLib.Controls.TextBoxes.CTextBox();
+            this.txtContrasenia = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -221,10 +221,10 @@
             this.txtContrasenia.PasswordChar = '*';
             this.txtContrasenia.Size = new System.Drawing.Size(309, 26);
             this.txtContrasenia.TabIndex = 43;
-            this.txtContrasenia.WaterMark = "";
+            /*this.txtContrasenia.WaterMark = "";
             this.txtContrasenia.WaterMarkActiveForeColor = System.Drawing.Color.Gray;
             this.txtContrasenia.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtContrasenia.WaterMarkForeColor = System.Drawing.Color.LightGray;
+            this.txtContrasenia.WaterMarkForeColor = System.Drawing.Color.LightGray;*/
             // 
             // MUsuario
             // 
@@ -257,6 +257,6 @@
         public System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblNombre;
         public System.Windows.Forms.TextBox txtNombre;
-        private ChreneLib.Controls.TextBoxes.CTextBox txtContrasenia;
+        private System.Windows.Forms.TextBox txtContrasenia;
     }
 }

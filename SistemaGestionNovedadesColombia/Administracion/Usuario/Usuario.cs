@@ -61,7 +61,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Usuario
             while (reader.Read())
             {
                 txtNombre.Text = reader.GetString(2);
-                txtContrasenia.WaterMark = "Ingrese nueva contraseña";
+                txtContrasenia.Text = "Ingrese nueva contraseña";
                 comboEstado.SelectedIndex = Convert.ToInt32(reader.GetBoolean(16));
                 chkClienteL.Checked = reader.GetBoolean(3);
                 chkClienteE.Checked = reader.GetBoolean(4);
@@ -106,7 +106,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Usuario
             SqlCommand cmd = new SqlCommand(procedure, conexionSql.getConnection());
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("@USUARIOANT", SqlDbType.VarChar).Value = user;
+            //cmd.Parameters.Add("@USUARIOANT", SqlDbType.VarChar).Value = user;
             cmd.Parameters.Add("@USUARIO", SqlDbType.VarChar).Value = txtUsuario.Text;
             cmd.Parameters.Add("@CONTRASENIA", SqlDbType.VarChar).Value = txtContrasenia.Text;
             cmd.Parameters.Add("@NOMBRE", SqlDbType.VarChar).Value = txtNombre.Text;

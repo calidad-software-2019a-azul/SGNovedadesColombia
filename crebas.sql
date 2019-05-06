@@ -1,10 +1,7 @@
 /*
 CREAR BASE DE DATOS
 */
-use master
-drop database SGIV
 
-create database SGIV
 use SGIV
 
 

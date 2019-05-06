@@ -36,7 +36,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Usuario
             while (reader.Read())
             {
                 txtNombre.Text = reader.GetString(2);
-                txtContrasenia.WaterMark = "Ingrese nueva contraseña";
+                txtContrasenia.Text = "Ingrese nueva contraseña";
             }
             conexionSql.Desconectar();
         }
